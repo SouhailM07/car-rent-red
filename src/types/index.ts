@@ -13,3 +13,9 @@ export interface aboutDetails {
   endV: number;
   txt: string;
 }
+
+export interface why {
+  img: string;
+  title: string;
+  txt: string;
+}

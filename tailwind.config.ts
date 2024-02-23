@@ -21,6 +21,7 @@ const config = {
       colors: {
         // custom
         primaryRed: "#DC2626",
+        secondaryText: "#4B5563",
         // shadcn-ui
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

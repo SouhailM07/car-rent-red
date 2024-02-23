@@ -16,7 +16,7 @@ export default function Navbar() {
   ];
   return (
     <>
-      <header className="sticky top-0">
+      <header className="sticky top-0 bg-white">
         <nav>
           <Image src={logo} alt="logo" width="194" height="64" />
           <ul className="flex space-x-[1.5rem] text-[0.8rem] ">

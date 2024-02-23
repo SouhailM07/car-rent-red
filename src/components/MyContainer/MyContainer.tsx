@@ -1,11 +1,13 @@
 import "./mycontainer.css";
 // components
-import { Navbar } from "@/components";
+import { Navbar, Home } from "@/components";
 export default function MyContainer() {
   return (
     <>
       <Navbar />
-      {/* <main>MyContainer</main> */}
+      <main>
+        <Home />
+      </main>
     </>
   );
 }

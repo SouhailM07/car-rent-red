@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-#Home{
-    @apply grid grid-cols-[40%_1fr] gap-x-[2rem] mx-auto mt-[4rem] px-[1rem] items-center;
+#Home {
+  @apply grid grid-cols-[40%_1fr] gap-x-[2rem] max-w-[70rem] mx-auto mt-[4rem] px-[1rem] items-center;
 }

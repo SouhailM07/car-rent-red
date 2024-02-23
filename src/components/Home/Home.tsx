@@ -37,6 +37,7 @@ export default function Home() {
         </section>
         <section>
           <Image
+            draggable={false}
             className="h-[22rem]"
             alt="hero img"
             src={heroImg}
@@ -56,7 +57,13 @@ export default function Home() {
 let DownloadBtn = ({ img, aria }: { img: string; aria: string }) => {
   return (
     <>
-      <Image src={img} alt="logo" role="button" aria-label={aria} />
+      <Image
+        draggable={false}
+        src={img}
+        alt="logo"
+        role="button"
+        aria-label={aria}
+      />
     </>
   );
 };

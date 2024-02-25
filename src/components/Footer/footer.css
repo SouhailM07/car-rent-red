@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.listTitle {
+  @apply font-bold mb-[1.5rem];
+}
+
+.sectionList {
+  @apply space-y-[0.8rem] text-[0.8rem];
+}

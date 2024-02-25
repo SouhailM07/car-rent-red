@@ -4,7 +4,7 @@ import { download } from "@/types";
 // assets
 import Image from "next/image";
 import heroImg from "/public/car.svg";
-import playStore from "/public/google-play.svg";
+import playStore from "/public/googleplay.png";
 import appStore from "/public/appstore-btn.svg";
 
 /*=============================================================================================*/
@@ -14,7 +14,7 @@ import appStore from "/public/appstore-btn.svg";
 export default function Home() {
   let download: download[] = [
     { img: appStore, ariaLabel: "download from appstore" },
-    { img: playStore, ariaLabel: "download from google play" },
+    // { img: playStore, ariaLabel: "download from google play" },
   ];
   return (
     <>
@@ -38,7 +38,7 @@ export default function Home() {
         <section>
           <Image
             draggable={false}
-            className="h-[22rem]"
+            className="h-[22rem] "
             alt="hero img"
             src={heroImg}
             width="861"

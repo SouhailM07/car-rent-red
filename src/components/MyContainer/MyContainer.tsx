@@ -1,6 +1,14 @@
 import "./mycontainer.css";
 // components
-import { Navbar, Home, SelectTime, About, WhyUs } from "@/components";
+import {
+  Navbar,
+  Home,
+  SelectTime,
+  About,
+  WhyUs,
+  Contact,
+  Footer,
+} from "@/components";
 export default function MyContainer() {
   return (
     <>
@@ -10,7 +18,9 @@ export default function MyContainer() {
         <SelectTime />
         <About />
         <WhyUs />
+        {/* <Contact /> */}
       </main>
+      <Footer />
     </>
   );
 }

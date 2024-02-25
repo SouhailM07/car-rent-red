@@ -4,7 +4,7 @@ import { download } from "@/types";
 // assets
 import Image from "next/image";
 import heroImg from "/public/car.svg";
-import playStore from "/public/googleplay.png";
+import playStore from "/public/google-play-badge-2022-2.svg";
 import appStore from "/public/appstore-btn.svg";
 
 /*=============================================================================================*/
@@ -14,7 +14,7 @@ import appStore from "/public/appstore-btn.svg";
 export default function Home() {
   let download: download[] = [
     { img: appStore, ariaLabel: "download from appstore" },
-    // { img: playStore, ariaLabel: "download from google play" },
+    { img: playStore, ariaLabel: "download from google play" },
   ];
   return (
     <>
@@ -29,7 +29,7 @@ export default function Home() {
             Find your ideal ride for any adventure with our diverse range of
             affordable and dependable car rentals
           </p>
-          <div className="flex space-x-[1rem]">
+          <div className="flex h-[2.5rem]">
             {download.map((e, i) => {
               return <DownloadBtn img={e.img} aria={e.ariaLabel} key={i} />;
             })}
@@ -63,6 +63,7 @@ let DownloadBtn = ({ img, aria }: { img: string; aria: string }) => {
         alt="logo"
         role="button"
         aria-label={aria}
+        className="h-full w-[8.7rem]"
       />
     </>
   );

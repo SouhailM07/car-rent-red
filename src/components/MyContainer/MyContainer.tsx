@@ -18,7 +18,7 @@ export default function MyContainer() {
         <SelectTime />
         <About />
         <WhyUs />
-        {/* <Contact /> */}
+        <Contact />
       </main>
       <Footer />
     </>

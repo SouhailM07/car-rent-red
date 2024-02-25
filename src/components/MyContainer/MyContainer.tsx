@@ -6,6 +6,7 @@ import {
   SelectTime,
   About,
   WhyUs,
+  Testimonials,
   Contact,
   Footer,
 } from "@/components";
@@ -18,6 +19,7 @@ export default function MyContainer() {
         <SelectTime />
         <About />
         <WhyUs />
+        <Testimonials />
         <Contact />
       </main>
       <Footer />

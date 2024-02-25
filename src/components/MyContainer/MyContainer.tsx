@@ -3,6 +3,7 @@ import "./mycontainer.css";
 import {
   Navbar,
   Home,
+  Cars,
   SelectTime,
   About,
   WhyUs,
@@ -17,6 +18,7 @@ export default function MyContainer() {
       <main className="space-y-[10rem]">
         <Home />
         <SelectTime />
+        <Cars />
         <About />
         <WhyUs />
         <Testimonials />

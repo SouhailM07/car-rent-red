@@ -8,3 +8,4 @@ export { default as WhyUs } from "./WhyUs/WhyUs";
 export { default as Testimonials } from "./Testimonials/Testimonials";
 export { default as SelectTime } from "./SelectTime/SelectTime";
 export { default as Footer } from "./Footer/Footer";
+export { default as Contact } from "./Contact/Contact";

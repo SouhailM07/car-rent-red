@@ -12,7 +12,7 @@ export default function Navbar() {
     { txt: "About", link: "#About" },
     { txt: "WhyUs", link: "#WhyUs" },
     { txt: "Testimonials", link: "#Testimonials" },
-    { txt: "Contact", link: "#Footer" },
+    { txt: "Contact", link: "#Contact" },
   ];
   return (
     <>

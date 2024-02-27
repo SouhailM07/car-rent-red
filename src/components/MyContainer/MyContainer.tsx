@@ -16,10 +16,10 @@ export default function MyContainer() {
     <>
       {/* <Navbar /> */}
       <main className="space-y-[10rem]">
-        <Home />
+        {/* <Home /> */}
         {/* <SelectTime /> */}
         {/* <Cars /> */}
-        {/* <About /> */}
+        <About />
         {/* <WhyUs /> */}
         {/* <Testimonials /> */}
         {/* <Contact /> */}

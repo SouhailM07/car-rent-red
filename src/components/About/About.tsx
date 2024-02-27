@@ -20,16 +20,17 @@ export default function About() {
   ];
   return (
     <>
-      <article
-        id="About"
-        className="grid grid-cols-2 gap-x-[2rem] componentSize"
-      >
+      <article id="About" className="componentSize">
         <section>
-          <Image src={aboutBg} alt="img" className="h-[20rem] w-[24rem]" />
+          <Image
+            src={aboutBg}
+            alt="img"
+            className="lg:h-[20rem] md:h-[15rem] w-[24rem]"
+          />
         </section>
         <section className="flex flex-col justify-between items-start">
           <h1 className="text-[1.8rem] font-bold">Car services simplified.</h1>
-          <p className="text-[0.8rem] text-secondaryText max-w-[20rem] ">
+          <p className="md:text-[0.8rem] text-[0.7rem] max-md:my-[1rem] text-secondaryText max-w-[20rem] ">
             Rent, choose, and repair with ease. OUr convenient locations,
             diverse car types, and relabel repair points ensure a seamiest car
             experience.
@@ -45,7 +46,7 @@ export default function About() {
                   />
                   <p>
                     <CountUp
-                      className="font-bold text-[1.2rem]"
+                      className="font-bold text-[1.3rem]"
                       start={0}
                       end={e.endV}
                       duration={6}

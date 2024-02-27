@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#About {
+  @apply grid gap-x-[2rem] items-center gap-y-[1rem];
+  @apply md:grid-cols-2 grid-cols-1 max-md:place-items-center;
+}

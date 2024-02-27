@@ -86,9 +86,9 @@ export default function Cars() {
 
   return (
     <>
-      <article className="px-[1rem]  space-y-[2rem]">
+      <article className="px-[1rem] relative max-w-[70rem] mx-auto !z-[0] space-y-[2rem]">
         <section>
-          <ul className="flex items-center justify-around flex-wrap">
+          <ul className="flex items-center justify-around  relative flex-wrap">
             {brands.map((e, i) => {
               return (
                 <li key={i}>
@@ -105,12 +105,12 @@ export default function Cars() {
           </ul>
         </section>
         {/* Garage */}
-        <ul className="flex justify-between">
+        <ul>
           <Swiper
             pagination={true}
             modules={[Pagination]}
             slidesPerView={3}
-            className="mySwiper flex flex-col "
+            className="mySwiper border-2 border-red-500 flex flex-col relative "
             spaceBetween={20}
           >
             {cars.map((e, i) => {

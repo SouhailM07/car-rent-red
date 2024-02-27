@@ -39,7 +39,7 @@ export default function Car({
   ];
   return (
     <>
-      <li className="w-[18rem]">
+      <li className="w-[18rem] relative z-[-1]">
         <Image src={img} alt="car img" />
         <div className="space-y-[1.5rem]">
           <div>
@@ -88,7 +88,7 @@ let Stars = ({ rate }: { rate: number }) => {
       <div className="flex items-center space-x-[0.4rem]">
         {Array(Math.floor(rate))
           .fill("")
-          .map((e, i) => {
+          .map((_e, i) => {
             return (
               <Image
                 key={i}
@@ -103,7 +103,7 @@ let Stars = ({ rate }: { rate: number }) => {
         )}
         {Array(5 - Math.ceil(rate))
           .fill("")
-          .map((e, i) => {
+          .map((_e, i) => {
             return (
               <Image
                 key={i}

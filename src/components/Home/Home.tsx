@@ -20,7 +20,7 @@ export default function Home() {
     <>
       <article id="Home">
         <section className="space-y-[1.5rem] max-w-[21rem]">
-          <h1 className="text-[2.2rem] font-bold leading-[2.8rem]">
+          <h1 className="lg:text-[2rem] text-[1.5rem] font-bold leading-[2.8rem]">
             Explore the finest <br />
             <span className="text-primaryRed">Global </span>
             Offers
@@ -29,7 +29,7 @@ export default function Home() {
             Find your ideal ride for any adventure with our diverse range of
             affordable and dependable car rentals
           </p>
-          <div className="flex h-[2.5rem]">
+          <div className="flex h-[2.5rem] max-md:justify-center ">
             {download.map((e, i) => {
               return <DownloadBtn img={e.img} aria={e.ariaLabel} key={i} />;
             })}
@@ -38,7 +38,7 @@ export default function Home() {
         <section>
           <Image
             draggable={false}
-            className="h-[22rem] "
+            className="md:h-[22rem] h-[17rem]"
             alt="hero img"
             src={heroImg}
             width="861"

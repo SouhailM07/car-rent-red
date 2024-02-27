@@ -17,6 +17,10 @@ const config = {
         "2xl": "1400px",
       },
     },
+    screens: {
+      lg: "1024px",
+      md: "768px",
+    },
     extend: {
       colors: {
         // custom

@@ -14,17 +14,17 @@ import {
 export default function MyContainer() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <main className="space-y-[10rem]">
-        <Home />
-        {/* <SelectTime /> */}
-        <Cars />
-        <About />
-        <WhyUs />
-        <Testimonials />
-        <Contact />
+        {/* <Home /> */}
+        <SelectTime />
+        {/* <Cars /> */}
+        {/* <About /> */}
+        {/* <WhyUs /> */}
+        {/* <Testimonials /> */}
+        {/* <Contact /> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

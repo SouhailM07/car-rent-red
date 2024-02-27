@@ -19,6 +19,7 @@ const config = {
     },
     screens: {
       lg: "1024px",
+      w855: "855px",
       md: "768px",
     },
     extend: {

@@ -39,7 +39,7 @@ export default function Car({
   ];
   return (
     <>
-      <li className="w-[18rem] relative z-[-1]">
+      <li className="max-w-[18rem] mx-auto relative z-[-1]">
         <Image src={img} alt="car img" />
         <div className="space-y-[1.5rem]">
           <div>
@@ -54,7 +54,7 @@ export default function Car({
               ${price}/DAY
             </p>
           </div>
-          <ul className="flex space-x-[1rem] text-[0.6rem] font-medium text-secondaryText uppercase ">
+          <ul className="flex space-x-[1rem] text-[0.55rem] font-medium text-secondaryText uppercase ">
             {details.map((e, i) => {
               return (
                 <li

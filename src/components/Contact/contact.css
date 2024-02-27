@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#Contact {
+  @apply flex justify-around items-center mx-auto max-md:flex-col max-md:text-center max-md:space-y-[2rem];
+}

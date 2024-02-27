@@ -21,8 +21,8 @@ export default function MyContainer() {
         {/* <Cars /> */}
         {/* <About /> */}
         {/* <WhyUs /> */}
-        <Testimonials />
-        {/* <Contact /> */}
+        {/* <Testimonials /> */}
+        <Contact />
       </main>
       {/* <Footer /> */}
     </>

@@ -14,9 +14,9 @@ export default function Contact() {
   ];
   return (
     <>
-      <article className="flex justify-around max-w-[70rem] px-[1rem] items-center mx-auto">
-        <section className="space-y-[1rem] max-w-[25rem]">
-          <h1 className="text-[1.8rem] font-bold">
+      <article id="Contact" className=" componentSize ">
+        <section className="space-y-[1rem] md:w-[50%] lg:w-[25rem]">
+          <h1 className="md:text-[1.8rem] text-[1.6rem] font-bold">
             Download our App now and hit the road with ease
           </h1>
           <p className="text-secondaryText text-[0.8rem]">
@@ -24,7 +24,7 @@ export default function Contact() {
             molestiae libero harum ipsa corporis, nesciunt incidunt numquam illo
             sequi praesentium?
           </p>
-          <div className="flex h-[2.5rem]">
+          <div className="flex h-[2.5rem] max-md:justify-center">
             {download.map((e, i) => {
               return <DownloadBtn img={e.img} aria={e.ariaLabel} key={i} />;
             })}

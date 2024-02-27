@@ -8,3 +8,7 @@
 .swiper-pagination-bullet {
   @apply !bg-primaryRed;
 }
+
+.Testimonials__quote {
+  @apply md:text-[1.6rem] text-[1.1rem] font-bold px-[1rem] mx-auto max-w-[40rem];
+}

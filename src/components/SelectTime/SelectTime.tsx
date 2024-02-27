@@ -18,7 +18,7 @@ import {
 export default function SelectTime() {
   return (
     <>
-      <article className="bg-white  sticky top-[3rem] flex justify-between mx-auto max-w-[62rem] px-[1rem] border border-gray-600 py-[0.3rem]">
+      <article className="bg-white lg:flex hidden sticky top-[3rem] justify-between mx-auto max-w-[62rem] px-[1rem] border border-gray-600 py-[0.3rem]">
         <section>
           <SelectTimeOptions />
         </section>

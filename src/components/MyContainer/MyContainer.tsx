@@ -20,11 +20,11 @@ export default function MyContainer() {
         {/* <SelectTime /> */}
         {/* <Cars /> */}
         {/* <About /> */}
-        {/* <WhyUs /> */}
+        <WhyUs />
         {/* <Testimonials /> */}
         {/* <Contact /> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

@@ -9,3 +9,17 @@
 .sectionList {
   @apply space-y-[0.8rem] text-[0.8rem];
 }
+
+#Footer__s1 {
+  @apply grid grid-cols-[35%_14%_23%_1fr] gap-y-[2rem];
+}
+@media screen and (max-width: 1250px) {
+  #Footer__s1 {
+    @apply grid-cols-2;
+  }
+}
+@media screen and (max-width: 768px) {
+  #Footer__s1 {
+    @apply grid-cols-1;
+  }
+}

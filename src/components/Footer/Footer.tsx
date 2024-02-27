@@ -28,8 +28,8 @@ const formSchema = z.object({
 export default function Footer() {
   return (
     <>
-      <footer className="mt-[10rem] px-[1rem] max-w-[70rem] mx-auto">
-        <article className="flex justify-between flex-wrap">
+      <footer className="mt-[10rem] componentSize mx-auto">
+        <article id="Footer__s1" className="">
           <S1 />
           <S2 />
           <S3 />

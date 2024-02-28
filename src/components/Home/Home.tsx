@@ -3,7 +3,7 @@ import "./home.css";
 import { download } from "@/types";
 // assets
 import Image from "next/image";
-import heroImg from "/public/car.svg";
+import heroImg from "/public/car.webp";
 import playStore from "/public/google-play-badge-2022-2.svg";
 import appStore from "/public/appstore-btn.svg";
 
@@ -35,10 +35,10 @@ export default function Home() {
             })}
           </div>
         </section>
-        <section>
+        <section className="">
           <Image
             draggable={false}
-            className="md:h-[22rem] h-[17rem]"
+            className="md:max-h-[22rem] max-h-[17rem] max-md:w-[100%] max-md:mt-[2rem]"
             alt="hero img"
             src={heroImg}
             width="861"

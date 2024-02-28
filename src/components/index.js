@@ -10,3 +10,4 @@ export { default as SelectTime } from "./SelectTime/SelectTime";
 export { default as Footer } from "./Footer/Footer";
 export { default as Contact } from "./Contact/Contact";
 export { default as NavbarMobile } from "./NavbarMobile/NavbarMobile";
+export { default as SelectTimeMobile } from "./SelectTimeMobile/SelectTimeMobile";

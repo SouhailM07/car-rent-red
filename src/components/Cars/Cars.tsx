@@ -88,10 +88,13 @@ export default function Cars() {
     <>
       <article className="px-[1rem] relative max-w-[70rem] mx-auto !z-[0] space-y-[2rem]">
         <section>
-          <ul className="flex items-center md:justify-around justify-center flex-wrap gap-y-[1rem] gap-x-[2rem]">
+          <ul
+            role="list"
+            className="flex items-center md:justify-around justify-center flex-wrap gap-y-[1rem] gap-x-[2rem]"
+          >
             {brands.map((e, i) => {
               return (
-                <li key={i}>
+                <li role="listitem" key={i}>
                   <Image
                     src={e}
                     alt="logo"
@@ -126,7 +129,7 @@ export default function Cars() {
           >
             {cars.map((e, i) => {
               return (
-                <SwiperSlide key={i} className="">
+                <SwiperSlide key={i} className="" role="listitem">
                   <Car
                     carName={e.carName}
                     carType={e.carType}

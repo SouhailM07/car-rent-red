@@ -54,11 +54,15 @@ export default function Car({
               ${price}/DAY
             </p>
           </div>
-          <ul className="flex space-x-[1rem] text-[0.55rem] font-medium text-secondaryText uppercase ">
+          <ul
+            role="list"
+            className="flex space-x-[1rem] text-[0.55rem] font-medium text-secondaryText uppercase "
+          >
             {details.map((e, i) => {
               return (
                 <li
                   key={i}
+                  role="listitem"
                   className="flex flex-col items-center space-y-[0.4rem]"
                 >
                   <Image

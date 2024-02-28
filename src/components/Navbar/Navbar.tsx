@@ -30,10 +30,17 @@ export default function Navbar() {
         <header className="sticky top-0 bg-white z-[99] ">
           <nav>
             <Image src={logo} alt="logo" width="194" height="64" />
-            <ul className="space-x-[1.5rem] text-[0.8rem] hidden lg:flex">
+            <ul
+              role="list"
+              className="space-x-[1.5rem] text-[0.8rem] hidden lg:flex"
+            >
               {navLinks.map((e, i) => {
                 return (
-                  <li key={i} className="cursor-pointer hover:text-primaryRed">
+                  <li
+                    key={i}
+                    role="listitem"
+                    className="cursor-pointer hover:text-primaryRed"
+                  >
                     <a href={e.link}>{e.txt}</a>
                   </li>
                 );

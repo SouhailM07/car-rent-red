@@ -35,10 +35,14 @@ export default function About() {
             diverse car types, and relabel repair points ensure a seamiest car
             experience.
           </p>
-          <ul className="flex space-x-[3rem] my-[2rem]">
+          <ul role="list" className="flex space-x-[3rem] my-[2rem]">
             {details.map((e, i) => {
               return (
-                <li key={i} className="grid-rows-3 space-y-[0.2rem] text-start">
+                <li
+                  key={i}
+                  role="listitem"
+                  className="grid-rows-3 space-y-[0.2rem] text-start"
+                >
                   <Image
                     src={e.img}
                     alt="logo"

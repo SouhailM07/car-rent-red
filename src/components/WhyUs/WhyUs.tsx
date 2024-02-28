@@ -48,7 +48,7 @@ export default function WhyUs() {
           className=" mx-auto  max-md:hidden "
         />
         <section id="WhyUs__s2">
-          <ul>
+          <ul role="list">
             {reasons.map((e, i) => {
               return <Why key={i} img={e.img} title={e.title} txt={e.txt} />;
             })}
@@ -70,7 +70,7 @@ let Why = ({
 }) => {
   return (
     <>
-      <li className="text-center space-y-[0.7rem]">
+      <li role="listitem" className="text-center space-y-[0.7rem]">
         <Image
           draggable={false}
           src={img}

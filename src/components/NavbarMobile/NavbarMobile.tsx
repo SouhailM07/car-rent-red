@@ -18,10 +18,13 @@ export default function NavbarMobile() {
   return (
     <>
       <article>
-        <ul className="text-[0.9rem] font-medium  flex-col flex items-center space-y-[1.1rem]">
+        <ul
+          role="list"
+          className="text-[0.9rem] font-medium  flex-col flex items-center space-y-[1.1rem]"
+        >
           {navLinks.map((e, i) => {
             return (
-              <li key={i} className=" hover:text-primaryRed">
+              <li role="listitem" key={i} className=" hover:text-primaryRed">
                 <a href={e.link}>{e.txt}</a>
               </li>
             );

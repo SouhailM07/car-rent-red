@@ -39,6 +39,7 @@ export default function Home() {
           <Image
             draggable={false}
             fetchPriority="high"
+            loading="eager"
             className="md:max-h-[22rem] max-h-[17rem] max-md:w-[80%] max-md:mx-auto max-md:mt-[2rem]"
             alt="hero img"
             src={heroImg}

@@ -5,7 +5,6 @@ import * as React from "react";
 import { useState } from "react";
 // shadcn-ui
 import { addDays, format } from "date-fns";
-import { Calendar as CalendarIcon } from "lucide-react";
 import { DateRange } from "react-day-picker";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -23,8 +22,8 @@ import clock_logo from "/public/clock-solid.svg";
 export default function SelectTime() {
   return (
     <>
-      <article className="bg-white lg:flex hidden sticky top-[3rem] justify-between mx-auto max-w-[62rem] px-[1rem] border border-gray-600 py-[0.3rem]">
-        <section className="grid grid-cols-3 gap-x-[1rem]">
+      <article className="bg-white lg:flex shadow-lg hidden sticky top-[3rem] justify-between mx-auto max-w-[62rem] px-[1rem] py-[0.3rem]">
+        <section className="grid grid-cols-3 gap-x-[1rem] items-end">
           <SelectPlace />
           <SelectTimeOptions />
           <SelectHours />
@@ -49,7 +48,7 @@ const SelectTimeOptions = ({
         <PopoverTrigger asChild>
           <div className="flex space-x-[0.5rem]">
             <Image
-              src={gps_logo}
+              src={calendar_logo}
               alt="logo"
               className="h-[1rem] w-[1rem] mt-[0.4rem]"
             />
@@ -61,14 +60,15 @@ const SelectTimeOptions = ({
                   !date && "text-muted-foreground"
                 )}
               >
-                {/* <CalendarIcon className="mr-2 h-3 w-3" /> */}
                 <p className="font-medium text-[0.8rem]">SELECT DATE</p>
                 <p className="text-[0.7rem]">
                   {date?.from ? (
                     date.to ? (
                       <>
                         {format(date.from, "LLL dd, y")}{" "}
-                        <span className="text-primaryRed">{"->"}</span>{" "}
+                        <span className="text-primaryRed font-bold">
+                          {"->"}
+                        </span>{" "}
                         {format(date.to, "LLL dd, y")}
                       </>
                     ) : (
@@ -99,39 +99,47 @@ const SelectTimeOptions = ({
 
 let SelectPlace = () => {
   let [place, setPlace] = useState<string>("SELECT THE PLACE");
-  let locations: string[] = ["New york", "2", "3", "4"];
-  let [toggleSelect, setToggleSelect] = useState<boolean>(false);
+  let locations: string[] = [
+    "MAIN STREET 123, UNITED STATES",
+    "BUSINESS AVENUE 456, CANADA",
+    "PARK ROAD 789, UNITED KINGDOM",
+  ];
   const handleSelect = (choice) => {
     setPlace(choice);
-    setToggleSelect(false);
   };
   return (
     <>
       <div>
-        <div className="">
-          <button
-            onClick={() => setToggleSelect(!toggleSelect)}
-            className="font-medium text-[0.8rem]"
-          >
-            SELECT LOCATION
-          </button>
-          <p className="text-[0.7rem] text-secondaryText">{place}</p>
-        </div>
-        {toggleSelect && (
-          <ul className="absolute translate-y-[1rem] py-[1rem] border-2 space-y-[0.5rem] w-[10rem] text-center px-[1rem] rounded-xl shadow-lg">
-            {locations.map((e, i) => {
-              return (
-                <li
-                  onClick={() => handleSelect(e)}
-                  key={i}
-                  className="cursor-pointer"
-                >
-                  {e}
-                </li>
-              );
-            })}
-          </ul>
-        )}
+        <Popover>
+          <PopoverTrigger className="font-medium text-[0.8rem] flex space-x-[0.5rem] text-start">
+            <>
+              <Image
+                src={gps_logo}
+                alt="logo"
+                className="h-[1rem] w-[1rem] mt-[0.3rem]"
+              />
+              <div>
+                <h1>SELECT LOCATION</h1>
+                <p className="text-[0.7rem] text-secondaryText">{place}</p>
+              </div>
+            </>
+          </PopoverTrigger>
+          <PopoverContent className=" translate-y-[1rem] py-[1rem] border-2 text-[0.7rem] min-w-[14rem] text-center px-[1rem] rounded-xl shadow-lg">
+            <ul className="space-y-[1rem] ">
+              {locations.map((e, i) => {
+                return (
+                  <li
+                    onClick={() => handleSelect(e)}
+                    key={i}
+                    className="cursor-pointer"
+                  >
+                    {e}
+                  </li>
+                );
+              })}
+            </ul>
+          </PopoverContent>
+        </Popover>
       </div>
     </>
   );
@@ -139,39 +147,43 @@ let SelectPlace = () => {
 
 let SelectHours = () => {
   let [hour, setHour] = useState<string>("SELECT THE HOURS");
-  let [toggleSelect, setToggleSelect] = useState<boolean>(false);
-  let locations: string[] = ["New york", "2", "3", "4"];
+  let locations: string[] = ["10:00 AM", "12:00 AM", "14:00 AM", "16:00 AM"];
   const handleSelect = (choice) => {
-    setToggleSelect(false);
     setHour(choice);
   };
   return (
     <>
       <div>
-        <div className="">
-          <button
-            onClick={() => setToggleSelect(!toggleSelect)}
-            className="font-medium text-[0.8rem]"
-          >
-            SELECT LOCATION
-          </button>
-          <p className="text-[0.7rem] text-secondaryText">{hour}</p>
-        </div>
-        {toggleSelect && (
-          <ul className="absolute translate-y-[1rem] py-[1rem] border-2 space-y-[0.5rem] w-[10rem] text-center px-[1rem] rounded-xl shadow-lg">
-            {locations.map((e, i) => {
-              return (
-                <li
-                  onClick={() => handleSelect(e)}
-                  key={i}
-                  className="cursor-pointer"
-                >
-                  {e}
-                </li>
-              );
-            })}
-          </ul>
-        )}
+        <Popover>
+          <PopoverTrigger className="font-medium text-[0.8rem] text-start flex space-x-[0.5rem]">
+            <>
+              <Image
+                src={clock_logo}
+                alt="logo"
+                className="h-[1rem] w-[1rem] mt-[0.3rem]"
+              />
+              <div>
+                <h1>SELECT THE HOURS</h1>
+                <p className="text-[0.7rem] text-secondaryText">{hour}</p>
+              </div>
+            </>
+          </PopoverTrigger>
+          <PopoverContent className=" translate-y-[1rem] py-[1rem] border-2  w-[10rem] text-center px-[1rem] rounded-xl shadow-lg">
+            <ul className="space-y-[1rem]">
+              {locations.map((e, i) => {
+                return (
+                  <li
+                    onClick={() => handleSelect(e)}
+                    key={i}
+                    className="cursor-pointer"
+                  >
+                    {e}
+                  </li>
+                );
+              })}
+            </ul>
+          </PopoverContent>
+        </Popover>
       </div>
     </>
   );

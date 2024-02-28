@@ -25,6 +25,8 @@ export default function About() {
           <Image
             src={aboutBg}
             alt="img"
+            loading="lazy"
+            fetchPriority="low"
             className="lg:h-[20rem] md:h-[15rem] w-[24rem]"
           />
         </section>

@@ -40,11 +40,9 @@ export default function Home() {
             draggable={false}
             fetchPriority="high"
             loading="eager"
-            className="md:max-h-[22rem] max-h-[17rem] max-md:w-[80%] max-md:mx-auto max-md:mt-[2rem]"
+            className="md:max-h-[22rem] max-h-[17rem] max-md:w-[70%] max-md:mx-auto max-md:mt-[2rem]"
             alt="hero img"
             src={heroImg}
-            width="861"
-            height="543"
           />
         </section>
       </article>

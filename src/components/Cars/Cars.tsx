@@ -9,17 +9,17 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 // assets
 import Image from "next/image";
-import ford_logo from "/public/brands/ford.svg";
-import mercedes_logo from "/public/brands/mercedes.svg";
-import audi_logo from "/public/brands/audi.svg";
-import bmw_logo from "/public/brands/bmw.svg";
-import skoda_logo from "/public/brands/skoda.svg";
-import vw_logo from "/public/brands/vw.svg";
-import mazda_logo from "/public/brands/mazda.svg";
+import ford_logo from "/public/brands/ford.webp";
+import mercedes_logo from "/public/brands/mercedes.webp";
+import audi_logo from "/public/brands/audi.webp";
+import bmw_logo from "/public/brands/bmw.webp";
+import skoda_logo from "/public/brands/skoda.webp";
+import vw_logo from "/public/brands/vw.webp";
+import mazda_logo from "/public/brands/mazda.webp";
 // assets cars
-import ford_car from "/public/carImgs/car01.png";
-import toyota_car from "/public/carImgs/car02.png";
-import hyundai_car from "/public/carImgs/car03.png";
+import ford_car from "/public/carImgs/car01.webp";
+import toyota_car from "/public/carImgs/car02.webp";
+import hyundai_car from "/public/carImgs/car03.webp";
 // components
 import { Car } from "@/components";
 
@@ -74,7 +74,7 @@ export default function Cars() {
       wheel: "FRONT",
     },
   ];
-  const brands: string[] = [
+  const brands = [
     ford_logo,
     mercedes_logo,
     audi_logo,
@@ -95,9 +95,9 @@ export default function Cars() {
                   <Image
                     src={e}
                     alt="logo"
-                    width="60"
-                    height="60"
-                    className="h-[3rem] w-[3rem]"
+                    // width="60"
+                    // height="60"
+                    className="max-w-[3rem]"
                   />
                 </li>
               );

@@ -97,6 +97,8 @@ export default function Cars() {
                 <li role="listitem" key={i}>
                   <Image
                     src={e}
+                    fetchPriority="high"
+                    loading="eager"
                     alt="logo"
                     // width="60"
                     // height="60"

@@ -15,7 +15,7 @@ export default function MyContainer() {
   return (
     <>
       <Navbar />
-      <main className="space-y-[10rem] relative z-[1]">
+      <main className="space-y-[10rem] ">
         <Home />
         <SelectTime />
         <Cars />

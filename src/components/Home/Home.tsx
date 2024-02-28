@@ -25,7 +25,7 @@ export default function Home() {
             <span className="text-primaryRed">Global </span>
             Offers
           </h1>
-          <p className="text-gray-400 text-[0.75rem]">
+          <p className="text-secondaryText text-[0.75rem]">
             Find your ideal ride for any adventure with our diverse range of
             affordable and dependable car rentals
           </p>

@@ -27,7 +27,7 @@ export default function Navbar() {
   return (
     <>
       <ToggleContext.Provider value={{ setToggleNav }}>
-        <header className="sticky top-0 bg-white">
+        <header className="sticky top-0 bg-white z-[99] ">
           <nav>
             <Image src={logo} alt="logo" width="194" height="64" />
             <ul className="space-x-[1.5rem] text-[0.8rem] hidden lg:flex">

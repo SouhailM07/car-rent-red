@@ -4,10 +4,8 @@ import "./cars.css";
 import { carTypes } from "@/types";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-// import required modules
 import { Pagination } from "swiper/modules";
 // assets
 import Image from "next/image";
@@ -107,43 +105,45 @@ export default function Cars() {
           </ul>
         </section>
         {/* Garage */}
-        <Swiper
-          pagination={true}
-          modules={[Pagination]}
-          role="list"
-          className="mySwiper flex flex-col relative"
-          spaceBetween={30}
-          breakpoints={{
-            640: {
-              slidesPerView: 1,
-            },
-            855: {
-              slidesPerView: 2,
-            },
-            1280: {
-              slidesPerView: 3,
-            },
-          }}
-        >
-          {cars.map((e, i) => {
-            return (
-              <SwiperSlide key={i}>
-                <Car
-                  carName={e.carName}
-                  carType={e.carType}
-                  gas={e.gas}
-                  price={e.price}
-                  seats={e.seats}
-                  gear={e.gear}
-                  hp={e.hp}
-                  img={e.img}
-                  rate={e.rate}
-                  wheel={e.wheel}
-                />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+        <section>
+          <Swiper
+            pagination={true}
+            modules={[Pagination]}
+            role="list"
+            className="mySwiper flex flex-col "
+            spaceBetween={30}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+              },
+              855: {
+                slidesPerView: 2,
+              },
+              1280: {
+                slidesPerView: 3,
+              },
+            }}
+          >
+            {cars.map((e, i) => {
+              return (
+                <SwiperSlide key={i} className="">
+                  <Car
+                    carName={e.carName}
+                    carType={e.carType}
+                    gas={e.gas}
+                    price={e.price}
+                    seats={e.seats}
+                    gear={e.gear}
+                    hp={e.hp}
+                    img={e.img}
+                    rate={e.rate}
+                    wheel={e.wheel}
+                  />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </section>
       </article>
     </>
   );

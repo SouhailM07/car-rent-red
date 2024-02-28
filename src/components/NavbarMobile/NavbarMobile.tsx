@@ -3,6 +3,8 @@ import "./navbarmobile.css";
 import { navLinks } from "@/types";
 // shadcn-ui
 import { Button } from "../ui/button";
+// components
+import { SelectTimeMobile } from "@/components";
 
 export default function NavbarMobile() {
   const navLinks: navLinks[] = [
@@ -27,6 +29,7 @@ export default function NavbarMobile() {
           <li>
             <Button className="p-[1.4rem] ">SEE ALL CARS</Button>
           </li>
+          <SelectTimeMobile />
         </ul>
       </article>
     </>

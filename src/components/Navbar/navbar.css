@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 nav {
-  @apply flex mx-auto  items-center justify-between;
+  @apply flex mx-auto z-10 relative  items-center justify-between;
   @apply px-[1rem] max-w-[58rem];
 }

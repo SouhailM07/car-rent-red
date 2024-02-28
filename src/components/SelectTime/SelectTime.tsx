@@ -22,7 +22,7 @@ import clock_logo from "/public/clock-solid.svg";
 export default function SelectTime() {
   return (
     <>
-      <article className="bg-white lg:flex shadow-lg hidden sticky top-[3rem] justify-between mx-auto max-w-[62rem] px-[1rem] py-[0.3rem]">
+      <article className="bg-white lg:flex shadow-lg hidden sticky top-[2.8rem] justify-between mx-auto max-w-[62rem] px-[1rem] z-[10] py-[0.3rem]">
         <section className="grid grid-cols-3 gap-x-[1rem] items-end">
           <SelectPlace />
           <SelectTimeOptions />

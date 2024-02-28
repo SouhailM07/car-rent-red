@@ -70,7 +70,7 @@ let Why = ({
 }) => {
   return (
     <>
-      <li className="tex-center space-y-[0.7rem]">
+      <li className="text-center space-y-[0.7rem]">
         <Image
           draggable={false}
           src={img}
@@ -78,7 +78,7 @@ let Why = ({
           className="h-[2rem] mx-auto w-[2rem]"
         />
         <h1 className="font-bold">{title}</h1>
-        <p className="text-secondaryText text-[0.72rem] mx-auto max-w-[20rem]">
+        <p className="text-secondaryText text-[0.72rem] mx-auto max-w-[19rem]">
           {txt}
         </p>
       </li>

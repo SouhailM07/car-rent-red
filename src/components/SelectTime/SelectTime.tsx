@@ -125,10 +125,11 @@ let SelectPlace = () => {
             </>
           </PopoverTrigger>
           <PopoverContent className=" translate-y-[1rem] py-[1rem] border-2 text-[0.7rem] min-w-[14rem] text-center px-[1rem] rounded-xl shadow-lg">
-            <ul className="space-y-[1rem] ">
+            <ul role="list" className="space-y-[1rem] ">
               {locations.map((e, i) => {
                 return (
                   <li
+                    role="listitem"
                     onClick={() => handleSelect(e)}
                     key={i}
                     className="cursor-pointer"
@@ -169,10 +170,11 @@ let SelectHours = () => {
             </>
           </PopoverTrigger>
           <PopoverContent className=" translate-y-[1rem] py-[1rem] border-2  w-[10rem] text-center px-[1rem] rounded-xl shadow-lg">
-            <ul className="space-y-[1rem]">
+            <ul role="list" className="space-y-[1rem]">
               {locations.map((e, i) => {
                 return (
                   <li
+                    role="listitem"
                     onClick={() => handleSelect(e)}
                     key={i}
                     className="cursor-pointer"

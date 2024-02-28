@@ -112,7 +112,6 @@ export default function Cars() {
           <Swiper
             pagination={true}
             modules={[Pagination]}
-            role="list"
             className="mySwiper flex flex-col "
             spaceBetween={30}
             breakpoints={{
@@ -127,24 +126,26 @@ export default function Cars() {
               },
             }}
           >
-            {cars.map((e, i) => {
-              return (
-                <SwiperSlide key={i} className="" role="listitem">
-                  <Car
-                    carName={e.carName}
-                    carType={e.carType}
-                    gas={e.gas}
-                    price={e.price}
-                    seats={e.seats}
-                    gear={e.gear}
-                    hp={e.hp}
-                    img={e.img}
-                    rate={e.rate}
-                    wheel={e.wheel}
-                  />
-                </SwiperSlide>
-              );
-            })}
+            <ul role="list">
+              {cars.map((e, i) => {
+                return (
+                  <SwiperSlide key={i} className="" role="listitem">
+                    <Car
+                      carName={e.carName}
+                      carType={e.carType}
+                      gas={e.gas}
+                      price={e.price}
+                      seats={e.seats}
+                      gear={e.gear}
+                      hp={e.hp}
+                      img={e.img}
+                      rate={e.rate}
+                      wheel={e.wheel}
+                    />
+                  </SwiperSlide>
+                );
+              })}
+            </ul>
           </Swiper>
         </section>
       </article>

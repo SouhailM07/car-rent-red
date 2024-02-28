@@ -38,7 +38,7 @@ export default function Home() {
         <section className="">
           <Image
             draggable={false}
-            className="md:max-h-[22rem] max-h-[17rem] max-md:w-[100%] max-md:mt-[2rem]"
+            className="md:max-h-[22rem] max-h-[17rem] max-md:w-[80%] max-md:mt-[2rem]"
             alt="hero img"
             src={heroImg}
             width="861"

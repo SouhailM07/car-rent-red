@@ -28,13 +28,23 @@ export default function Testimonials() {
                 return (
                   <li key={i + 1} role="listitem">
                     <SwiperSlide className="!space-y-[2rem] ">
-                      <Image src={quoteLogo} alt="logo" className="mx-auto" />
+                      <Image
+                        src={quoteLogo}
+                        alt="logo"
+                        className="mx-auto"
+                        fetchPriority="low"
+                      />
                       <p className="Testimonials__quote ">
                         They truly exceeded my expectations and made my car
                         rental experience a delight
                       </p>
                       <div className="space-y-[0.7rem]">
-                        <Image src={avatar} alt="logo" className="mx-auto" />
+                        <Image
+                          src={avatar}
+                          alt="logo"
+                          className="mx-auto"
+                          fetchPriority="low"
+                        />
                         <h1 className="text-[0.9rem]">Jane Doe</h1>
                         <p className="text-[0.8rem] text-secondaryText">
                           Photographer & Videographer

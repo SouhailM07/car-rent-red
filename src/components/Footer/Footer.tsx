@@ -57,7 +57,13 @@ let S1 = () => {
   return (
     <>
       <section className="max-w-[16rem] space-y-[1.4rem]">
-        <Image src={logo} alt="logo" width="194" height="64" />
+        <Image
+          src={logo}
+          alt="logo"
+          width="194"
+          height="64"
+          fetchPriority="low"
+        />
         <p className="text-secondaryText text-[0.8rem]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>

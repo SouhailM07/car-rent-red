@@ -14,6 +14,7 @@ import engine_logo from "/public/carSlider/engine.svg";
 import wheel_logo from "/public/carSlider/wheel.svg";
 // shadcn-ui
 import { Button } from "../ui/button";
+import { SwiperSlide } from "swiper/react";
 export default function Car({
   img,
   carName,
@@ -39,48 +40,50 @@ export default function Car({
   ];
   return (
     <>
-      <li className="max-w-[18rem] mx-auto relative z-[-1]">
-        <Image src={img} alt="car img" />
-        <div className="space-y-[1.5rem]">
-          <div>
-            <div className="flex justify-between">
-              <span className="text-secondaryText text-[0.7rem]">
-                {carType}
-              </span>
-              <Stars rate={rate} />
+      <li role="listitem" className="max-w-[18rem] mx-auto relative z-[-1]">
+        <SwiperSlide className="">
+          <Image src={img} alt="car img" fetchPriority="low" />
+          <div className="space-y-[1.5rem]">
+            <div>
+              <div className="flex justify-between">
+                <span className="text-secondaryText text-[0.7rem]">
+                  {carType}
+                </span>
+                <Stars rate={rate} />
+              </div>
+              <h1 className="font-bold text-[0.9rem]">{carName}</h1>
+              <p className="text-primaryRed text-[0.7rem] font-bold">
+                ${price}/DAY
+              </p>
             </div>
-            <h1 className="font-bold text-[0.9rem]">{carName}</h1>
-            <p className="text-primaryRed text-[0.7rem] font-bold">
-              ${price}/DAY
-            </p>
+            <ul
+              role="list"
+              className="flex space-x-[1rem] text-[0.55rem] font-medium text-secondaryText uppercase "
+            >
+              {details.map((e, i) => {
+                return (
+                  <li
+                    key={i}
+                    role="listitem"
+                    className="flex flex-col items-center space-y-[0.4rem]"
+                  >
+                    <Image
+                      src={e.img}
+                      alt="logo"
+                      width={40}
+                      height={40}
+                      className="bg-slate-900 p-[0.3rem] rounded-full"
+                    />
+                    <p>{e.detail}</p>
+                  </li>
+                );
+              })}
+            </ul>
+            <Button className="bg-primaryRed hover:bg-red-700 w-full text-[0.8rem] rounded-sm">
+              SEE DETAILS
+            </Button>
           </div>
-          <ul
-            role="list"
-            className="flex space-x-[1rem] text-[0.55rem] font-medium text-secondaryText uppercase "
-          >
-            {details.map((e, i) => {
-              return (
-                <li
-                  key={i}
-                  role="listitem"
-                  className="flex flex-col items-center space-y-[0.4rem]"
-                >
-                  <Image
-                    src={e.img}
-                    alt="logo"
-                    width={40}
-                    height={40}
-                    className="bg-slate-900 p-[0.3rem] rounded-full"
-                  />
-                  <p>{e.detail}</p>
-                </li>
-              );
-            })}
-          </ul>
-          <Button className="bg-primaryRed hover:bg-red-700 w-full text-[0.8rem] rounded-sm">
-            SEE DETAILS
-          </Button>
-        </div>
+        </SwiperSlide>
       </li>
     </>
   );

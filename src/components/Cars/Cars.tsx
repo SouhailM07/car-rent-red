@@ -129,20 +129,19 @@ export default function Cars() {
             <ul role="list">
               {cars.map((e, i) => {
                 return (
-                  <SwiperSlide key={i} className="" role="listitem">
-                    <Car
-                      carName={e.carName}
-                      carType={e.carType}
-                      gas={e.gas}
-                      price={e.price}
-                      seats={e.seats}
-                      gear={e.gear}
-                      hp={e.hp}
-                      img={e.img}
-                      rate={e.rate}
-                      wheel={e.wheel}
-                    />
-                  </SwiperSlide>
+                  <Car
+                    key={i}
+                    carName={e.carName}
+                    carType={e.carType}
+                    gas={e.gas}
+                    price={e.price}
+                    seats={e.seats}
+                    gear={e.gear}
+                    hp={e.hp}
+                    img={e.img}
+                    rate={e.rate}
+                    wheel={e.wheel}
+                  />
                 );
               })}
             </ul>

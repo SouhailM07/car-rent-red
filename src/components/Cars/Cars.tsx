@@ -2,9 +2,6 @@
 import "./cars.css";
 // ? types
 import { carTypes } from "@/types";
-// hooks
-import { useEffect } from "react";
-import ScrollReveal from "scrollreveal";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -27,15 +24,6 @@ import hyundai_car from "/public/carImgs/car03.webp";
 import { Car } from "@/components";
 
 export default function Cars() {
-  useEffect(() => {
-    const sr = ScrollReveal({
-      // options
-      origin: "top",
-      distance: "0px",
-      duration: 1500,
-    });
-    sr.reveal("#Cars__s1 li", { interval: 50 });
-  }, []);
   const cars: carTypes[] = [
     {
       img: ford_car,

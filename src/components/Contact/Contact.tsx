@@ -1,10 +1,6 @@
-"use client";
 import "./contact.css";
 // ? types
 import { download } from "@/types";
-// hooks
-import { useEffect } from "react";
-import ScrollReveal from "scrollreveal";
 // assets
 import contact_logo from "/public/cta.svg";
 import Image from "next/image";
@@ -12,16 +8,6 @@ import playStore from "/public/google-play-badge-2022-2.svg";
 import appStore from "/public/appstore-btn.svg";
 
 export default function Contact() {
-  useEffect(() => {
-    const sr = ScrollReveal({
-      // options
-      distance: "60px",
-      duration: 2000,
-      delay: 300,
-    });
-    sr.reveal("#Contact__s1", { origin: "left" });
-    sr.reveal("#Contact__s2", { origin: "right" });
-  }, []);
   let download: download[] = [
     { img: appStore, ariaLabel: "download from appstore" },
     { img: playStore, ariaLabel: "download from google play" },

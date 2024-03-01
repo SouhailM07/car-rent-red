@@ -3,9 +3,6 @@ import "./about.css";
 // ? types
 import { aboutDetails } from "@/types";
 import CountUp from "react-countup";
-// hooks
-import { useEffect } from "react";
-import ScrollReveal from "scrollreveal";
 // shadcn-ui
 import { Button } from "../ui/button";
 // assets
@@ -16,17 +13,6 @@ import buildingLogo from "/public/building-solid.svg";
 import repairLogo from "/public/wrench-solid.svg";
 
 export default function About() {
-  useEffect(() => {
-    const sr = ScrollReveal({
-      // options
-      origin: "top",
-      distance: "0px",
-      duration: 2500,
-      delay: 300,
-    });
-    sr.reveal("#About__s1");
-    sr.reveal("#About__s2", { distance: "60px", origin: "bottom" });
-  }, []);
   let details: aboutDetails[] = [
     { img: carLogo, endV: 50, txt: "CAR TYPES" },
     { img: buildingLogo, endV: 135, txt: "RENTAL OUTLETS" },

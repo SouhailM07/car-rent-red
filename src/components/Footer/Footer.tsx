@@ -101,7 +101,11 @@ const S2 = () => {
         <ul className="sectionList" role="list">
           {company.map((e, i) => {
             return (
-              <li role="listitem" key={i}>
+              <li
+                role="listitem"
+                key={i}
+                className="hover:font-bold cursor-pointer"
+              >
                 {e}
               </li>
             );

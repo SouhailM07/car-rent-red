@@ -5,6 +5,11 @@
 .componentSize {
   @apply max-w-[70rem] mx-auto px-[1rem];
 }
+
+body {
+  @apply overflow-x-hidden;
+}
+
 /*  */
 @layer base {
   :root {

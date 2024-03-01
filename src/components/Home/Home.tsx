@@ -1,6 +1,11 @@
+"use client";
 import "./home.css";
 // ? types
 import { download } from "@/types";
+
+// hooks
+import { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
 // assets
 import Image from "next/image";
 import heroImg from "/public/car.webp";
@@ -12,6 +17,19 @@ import appStore from "/public/appstore-btn.svg";
 /*=============================================================================================*/
 
 export default function Home() {
+  useEffect(() => {
+    const sr = ScrollReveal({
+      // options
+      origin: "top",
+      distance: "60px",
+      duration: 2500,
+      delay: 400,
+    });
+    sr.reveal("#Home__s2", { origin: "bottom" });
+    sr.reveal("#Home__s1 h1", { delay: 150 });
+    sr.reveal("#Home__s1 p", { delay: 200 });
+    sr.reveal("#Home__s1 div", { delay: 250 });
+  }, []);
   let download: download[] = [
     { img: appStore, ariaLabel: "download from appstore" },
     { img: playStore, ariaLabel: "download from google play" },
@@ -19,7 +37,7 @@ export default function Home() {
   return (
     <>
       <article id="Home">
-        <section className="space-y-[1.5rem] max-w-[21rem]">
+        <section id="Home__s1" className="space-y-[1.5rem] max-w-[21rem]">
           <h1 className="lg:text-[2rem] text-[1.5rem] font-bold leading-[2.8rem]">
             Explore the finest <br />
             <span className="text-primaryRed">Global </span>
@@ -35,12 +53,12 @@ export default function Home() {
             })}
           </div>
         </section>
-        <section className="">
+        <section id="Home__s2">
           <Image
             draggable={false}
             fetchPriority="high"
             loading="eager"
-            className="md:max-h-[22rem] max-h-[17rem] max-md:w-[70%] max-md:mx-auto max-md:mt-[2rem]"
+            className="md:max-h-[22rem] max-h-[17rem] max-md:w-[90%] max-md:mx-auto max-md:mt-[2rem]"
             alt="hero img"
             src={heroImg}
           />

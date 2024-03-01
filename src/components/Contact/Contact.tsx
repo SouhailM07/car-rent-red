@@ -1,6 +1,10 @@
+"use client";
 import "./contact.css";
 // ? types
 import { download } from "@/types";
+// hooks
+import { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
 // assets
 import contact_logo from "/public/cta.svg";
 import Image from "next/image";
@@ -8,14 +12,28 @@ import playStore from "/public/google-play-badge-2022-2.svg";
 import appStore from "/public/appstore-btn.svg";
 
 export default function Contact() {
+  useEffect(() => {
+    const sr = ScrollReveal({
+      // options
+      distance: "60px",
+      duration: 2000,
+      delay: 300,
+    });
+    sr.reveal("#Contact__s1", { origin: "left" });
+    sr.reveal("#Contact__s2", { origin: "right" });
+  }, []);
   let download: download[] = [
     { img: appStore, ariaLabel: "download from appstore" },
     { img: playStore, ariaLabel: "download from google play" },
   ];
+
   return (
     <>
       <article id="Contact" className=" componentSize ">
-        <section className="space-y-[1rem] md:w-[50%] lg:w-[25rem]">
+        <section
+          id="Contact__s1"
+          className="space-y-[1rem] md:w-[50%] lg:w-[25rem]"
+        >
           <h1 className="md:text-[1.8rem] text-[1.6rem] font-bold">
             Download our App now and hit the road with ease
           </h1>
@@ -30,7 +48,7 @@ export default function Contact() {
             })}
           </div>
         </section>
-        <section>
+        <section id="Contact__s2">
           <Image alt="img" src={contact_logo} width="315" height="560" />
         </section>
       </article>

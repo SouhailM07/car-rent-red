@@ -26,7 +26,7 @@ export default function Testimonials() {
               .fill("")
               .map((_e, i) => {
                 return (
-                  <li key={i + 1} role="listitem">
+                  <li key={i} role="listitem">
                     <SwiperSlide className="!space-y-[2rem] ">
                       <Image
                         src={quoteLogo}

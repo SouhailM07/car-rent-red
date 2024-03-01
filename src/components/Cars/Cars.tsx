@@ -2,6 +2,9 @@
 import "./cars.css";
 // ? types
 import { carTypes } from "@/types";
+// hooks
+import { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -24,6 +27,15 @@ import hyundai_car from "/public/carImgs/car03.webp";
 import { Car } from "@/components";
 
 export default function Cars() {
+  useEffect(() => {
+    const sr = ScrollReveal({
+      // options
+      origin: "top",
+      distance: "0px",
+      duration: 1500,
+    });
+    sr.reveal("#Cars__s1 li", { interval: 50 });
+  }, []);
   const cars: carTypes[] = [
     {
       img: ford_car,
@@ -86,8 +98,11 @@ export default function Cars() {
 
   return (
     <>
-      <article className="px-[1rem] relative max-w-[70rem] mx-auto !z-[0] space-y-[2rem]">
-        <section>
+      <article
+        id="Cars"
+        className="px-[1rem] relative max-w-[70rem] mx-auto !z-[0] space-y-[2rem]"
+      >
+        <section id="Cars__s1">
           <ul
             role="list"
             className="flex items-center md:justify-around justify-center flex-wrap gap-y-[1rem] gap-x-[2rem]"
@@ -131,10 +146,9 @@ export default function Cars() {
             <ul role="list">
               {cars.map((e, i) => {
                 return (
-                  <li role="listitem">
+                  <li role="listitem" key={i}>
                     <SwiperSlide>
                       <Car
-                        key={i}
                         carName={e.carName}
                         carType={e.carType}
                         gas={e.gas}

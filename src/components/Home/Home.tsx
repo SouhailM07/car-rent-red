@@ -40,7 +40,7 @@ export default function Home() {
             draggable={false}
             fetchPriority="high"
             loading="eager"
-            className="md:max-h-[22rem] max-h-[17rem] max-md:w-[70%] max-md:mx-auto max-md:mt-[2rem]"
+            className="md:max-h-[22rem] max-h-[17rem] max-md:w-[90%] max-md:mx-auto max-md:mt-[2rem]"
             alt="hero img"
             src={heroImg}
           />
